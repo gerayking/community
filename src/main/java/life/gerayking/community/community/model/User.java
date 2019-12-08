@@ -1,9 +1,19 @@
 package life.gerayking.community.community.model;
 
 public class User {
+    private  Integer id;
     private  String name;
     private  String accountId;
     private  String token;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     private  Long gmtCreate;
     private  Long gmtModified;
 

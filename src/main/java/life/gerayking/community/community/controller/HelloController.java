@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 Creat by coderinker on 2019/12/2
 * */
 @Controller
-@Component
 public class HelloController{
     @Autowired
     private UserMapper userMapper;
