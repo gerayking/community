@@ -1,25 +1,35 @@
 package life.gerayking.community.community.controller;
 
+import life.gerayking.community.community.dto.QuestionDTO;
+import life.gerayking.community.community.mapper.QuestionMapper;
 import life.gerayking.community.community.mapper.UserMapper;
+import life.gerayking.community.community.model.Question;
 import life.gerayking.community.community.model.User;
+import life.gerayking.community.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /*
 Creat by coderinker on 2019/12/2
 * */
 @Controller
-public class HelloController{
+public class IndexController {
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private QuestionService questionService;
     @GetMapping("/")
-    public String index(HttpServletRequest request){
+    public String index(HttpServletRequest request,
+                        Model model){
         Cookie[] cookies = request.getCookies();
+        if(cookies!=null)
         for(Cookie cookie:cookies)
         {
             if(cookie.getName().equals("token")){
@@ -32,6 +42,9 @@ public class HelloController{
             }
         }
 
-        return "index";}
+        List<QuestionDTO> questionList = questionService.list();
+        model.addAttribute("questions",questionList);
+        return "index";
+    }
 
 }
