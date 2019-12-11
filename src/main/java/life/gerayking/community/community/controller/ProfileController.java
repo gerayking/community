@@ -30,19 +30,7 @@ public class ProfileController {
                           @RequestParam(name ="size",defaultValue = "2")Integer size,
                           Model model)
     {
-        User user=null;
-        Cookie[] cookies = request.getCookies();
-        if(cookies!=null)
-            for(Cookie cookie:cookies) {
-                if (cookie.getName().equals("token")) {
-                    String token = cookie.getValue();
-                    user = userMapper.findBytoken(token);
-                    if (user != null) {
-                        request.getSession().setAttribute("user", user);
-                    }
-                    break;
-                }
-            }
+        User user =(User)request.getSession().getAttribute("user");
         if(user==null)
         {
             return "redirect:/";
