@@ -72,7 +72,7 @@ public class PublishController {
         question.setTag(tag);
         question.setGmtCreate(System.currentTimeMillis());
         question.setGmtModified(question.getGmtCreate());
-        question.setCreator(user.getId());
+        question.setCreator(user.getAccountId());//这里设置问题的创建者用AccoutId，因为重新登录后ID就会变
         questionMapper.create(question);
         return "redirect:/";
     }
