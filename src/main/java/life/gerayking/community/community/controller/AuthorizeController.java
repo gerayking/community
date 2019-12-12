@@ -62,4 +62,18 @@ public class AuthorizeController {
             return "redirect:/";
         }
     }
+    @GetMapping("/logout")
+    public String logout(HttpServletRequest request,
+                         HttpServletResponse response)
+    {
+        //删除cookies操作
+        //先删除给前端的user对象
+        request.getSession().removeAttribute("user");
+        //给现有的cookies注入一个新的值null
+        Cookie cookie = new Cookie("token",null);
+        //设置立即删除
+        cookie.setMaxAge(0);
+        response.addCookie(cookie);
+        return "redirect:/";
+    }
 }

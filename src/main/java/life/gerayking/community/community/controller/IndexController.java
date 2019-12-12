@@ -36,6 +36,11 @@ public class IndexController {
                         @RequestParam(name ="size",defaultValue = "5")Integer size){
 
         PaginationDTO paginationDTO = questionService.list(page,size);
+        List<QuestionDTO> questions = paginationDTO.getQuestions();
+        for(int i=0;i<questions.size();i++)
+        {
+            System.out.println(questions.get(i).toString());
+        }
         model.addAttribute("paginations",paginationDTO);
         return "index";
     }
