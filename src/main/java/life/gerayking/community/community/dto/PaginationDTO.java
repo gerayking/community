@@ -1,6 +1,5 @@
 package life.gerayking.community.community.dto;
 
-import life.gerayking.community.community.model.Question;
 import lombok.Data;
 
 import java.util.LinkedList;

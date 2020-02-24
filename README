@@ -9,3 +9,7 @@
 [Git](https://git-scm.com/downlocad_)
 
 [VP](https://www.visual-paradigm.com)
+
+
+### mybatis
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate

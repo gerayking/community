@@ -1,12 +1,10 @@
 package life.gerayking.community.community.controller;
 
 import life.gerayking.community.community.dto.QuestionDTO;
-import life.gerayking.community.community.mapper.QuestionMapper;
 import life.gerayking.community.community.mapper.UserMapper;
 import life.gerayking.community.community.model.Question;
 import life.gerayking.community.community.model.User;
 import life.gerayking.community.community.service.QuestionService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,7 +22,7 @@ public class PublishController {
     private QuestionService questionService;
 
     @GetMapping("/publish/{id}")
-    public  String edit(@PathVariable(name = "id")Integer id,
+    public  String edit(@PathVariable(name = "id")Long id,
                         Model model)
     {
         QuestionDTO question = questionService.getById(id);
@@ -41,7 +39,7 @@ public class PublishController {
             @RequestParam(value = "title",required = false)String title,
             @RequestParam(value = "description",required = false)String description,
             @RequestParam(value = "tag",required = false)String tag,
-            @RequestParam(value = "id",required = false)Integer id,
+            @RequestParam(value = "id",required = false)Long id,
             HttpServletRequest request,
             Model model){
         model.addAttribute("title",title);
