@@ -9,12 +9,13 @@ import life.gerayking.community.community.model.Question;
 import life.gerayking.community.community.model.QuestionExample;
 import life.gerayking.community.community.model.User;
 import org.apache.ibatis.session.RowBounds;
+import org.h2.util.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public class QuestionService {
@@ -43,12 +44,13 @@ public class QuestionService {
             questionDTO.setUser(user);
             questionDTOList.add(questionDTO);
         }
-        paginationDTO.setQuestions(questionDTOList);
+        Collections.reverse(questionDTOList);
+        paginationDTO.setData(questionDTOList);
         paginationDTO.setPagination(totalCount,page,size);
         return paginationDTO;
     }
 
-    public PaginationDTO list(String userId, Integer page, Integer size) {
+    public PaginationDTO list(Long userId, Integer page, Integer size) {
         QuestionExample example = new QuestionExample();
         example.createCriteria()
                 .andCreatorEqualTo(userId);
@@ -71,7 +73,7 @@ public class QuestionService {
             questionDTO.setUser(user);
             questionDTOList.add(questionDTO);
         }
-        paginationDTO.setQuestions(questionDTOList);
+        paginationDTO.setData(questionDTOList);
         paginationDTO.setPage(page);
         paginationDTO.setPagination(totalCount,page,size);
         return paginationDTO;
@@ -92,7 +94,7 @@ public class QuestionService {
             //创建
             question.setGmtCreate(System.currentTimeMillis());
             question.setGmtModified(question.getGmtCreate());
-            question.setLikeCount(0);
+            question.setLikeCount(0L);
             question.setCommentCount(0);
             question.setViewCount(0);
             questionMapper.insert(question);
@@ -115,5 +117,25 @@ public class QuestionService {
         question.setId(id);
         question.setViewCount(1);
         questionExtMapper.incView(question);
+    }
+
+    public List<QuestionDTO> selectRelated(QuestionDTO queryDTO) {
+        if(StringUtils.isNullOrEmpty(queryDTO.getTag().trim())){
+            return new ArrayList<>();
+        }
+        //String[] tags = StringUtils.arraySplit(queryDTO.getTag(), ',', true);
+        //Arrays.stream(tags).collect(Collectors.joining("|"));
+        String regexpTag = queryDTO.getTag().replace(',','|');
+        Question question = new Question();
+        question.setId(queryDTO.getId());
+        question.setTag(regexpTag);
+
+        List<Question> questions = questionExtMapper.selectRelated(question);
+        List<QuestionDTO> questionDTOs = questions.stream().map(q -> {
+            QuestionDTO questionDTO = new QuestionDTO();
+            BeanUtils.copyProperties(q,questionDTO);
+            return questionDTO;
+        }).collect(Collectors.toList());
+        return questionDTOs;
     }
 }

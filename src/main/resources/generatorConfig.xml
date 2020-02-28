@@ -13,6 +13,8 @@
                         connectionURL="jdbc:mysql://localhost:3306/p_user?serverTimezone=GMT"
                         userId="root"
                         password="">
+<!--            多个文件处理方法测试-->
+            <property name="nullCatalogMeansCurrent" value="true" />
         </jdbcConnection>
 <!--        数据库连接信息-->
         <javaTypeResolver >
@@ -35,6 +37,7 @@
         <table schema="root" tableName="user" domainObjectName="User" ></table>
         <table schema="root" tableName="question" domainObjectName="Question" ></table>
         <table schema="root" tableName="comment" domainObjectName="Comment"></table>
+        <table schema="root" tableName="notification" domainObjectName="Notification"></table>
 
     </context>
 </generatorConfiguration>

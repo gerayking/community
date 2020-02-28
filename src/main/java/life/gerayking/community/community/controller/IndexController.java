@@ -1,6 +1,7 @@
 package life.gerayking.community.community.controller;
 
 import life.gerayking.community.community.dto.PaginationDTO;
+import life.gerayking.community.community.dto.QuestionDTO;
 import life.gerayking.community.community.mapper.QuestionMapper;
 import life.gerayking.community.community.mapper.UserMapper;
 import life.gerayking.community.community.service.QuestionService;
@@ -26,7 +27,7 @@ public class IndexController {
                         Model model,
                         @RequestParam(name ="page",defaultValue = "1")Integer page,
                         @RequestParam(name ="size",defaultValue = "5")Integer size){
-        PaginationDTO paginationDTO = questionService.list(page,size);
+        PaginationDTO<QuestionDTO> paginationDTO = questionService.list(page,size);
         model.addAttribute("paginations",paginationDTO);
         return "index";
     }
