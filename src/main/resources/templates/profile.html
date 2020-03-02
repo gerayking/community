@@ -97,10 +97,11 @@
                    th:classappend="${section=='questions'?'active list-group-item':'list-group-item'}">我的问题</a>
                 <a href="/profile/replies" class="list-group-item side-nav"
                    th:classappend="${section=='replies'?'active list-group-item':'list-group-item'}">最新回复
-                <span class="badge replies-num" th:text="${unreadCount}"></span>
+                <span class="badge replies-num" th:text="${session.unreadCount}"></span>
                 </a>
             </div>
         </div>
+    <div th:insert="footer::foot"></div>
 
 </body>
 </html>

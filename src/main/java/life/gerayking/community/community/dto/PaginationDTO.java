@@ -13,7 +13,7 @@ public class PaginationDTO<T>{
     private boolean showEndPage;
     private Integer page;
     private List<Integer> pages;
-    private Integer endPage;
+    private Integer totalPage;
     public void setPagination(Integer totalcount, Integer page, Integer size){
         pages = new LinkedList<>();
         Integer totalPage = 0;
@@ -31,7 +31,7 @@ public class PaginationDTO<T>{
         showFirstPage= !pages.contains(1);
         //是否展示最后一页
         showEndPage = !pages.contains(totalPage);
-        endPage=totalPage;
+        totalPage=totalPage;
         this.page=page;
     }
 }

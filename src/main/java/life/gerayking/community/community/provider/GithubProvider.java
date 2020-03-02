@@ -3,6 +3,8 @@ package life.gerayking.community.community.provider;
 import com.alibaba.fastjson.JSON;
 import life.gerayking.community.community.dto.AccesstokenDTO;
 import life.gerayking.community.community.dto.GithubUser;
+import life.gerayking.community.community.exception.CustomizeErrorCode;
+import life.gerayking.community.community.exception.CustomizeException;
 import okhttp3.*;
 import org.springframework.stereotype.Component;
 import java.io.IOException;
@@ -21,7 +23,6 @@ public class GithubProvider {
                 String string = response.body().string();
                 String[] split =string.split("&");
                 String Token = split[0].split("=")[1];
-                System.out.println(Token);
                 return Token;
             }
             catch (Exception e)
@@ -39,10 +40,10 @@ public class GithubProvider {
         try (Response response = client.newCall(request).execute()) {
             String string = response.body().string();
             GithubUser githubUser = JSON.parseObject(string, GithubUser.class);
+            if(githubUser.getName()==null) githubUser.setName(githubUser.getLogin());
             return githubUser;
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new CustomizeException(CustomizeErrorCode.CONNECT_TIME_OUT);
         }
-        return null;
     }
 }

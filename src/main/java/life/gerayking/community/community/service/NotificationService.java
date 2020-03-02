@@ -34,6 +34,7 @@ public class NotificationService {
         NotificationExample notificationExample = new NotificationExample();
         notificationExample.createCriteria()
                 .andReceiverEqualTo(userId);
+
         Integer totalCount = (int) notificationMapper.countByExample(notificationExample);
         Integer totalPage = totalCount % size == 0 ? totalCount / size : totalCount / size + 1;
         page = Math.min(page, totalPage);
@@ -44,17 +45,20 @@ public class NotificationService {
         NotificationExample example = new NotificationExample();
         example.createCriteria()
                 .andReceiverEqualTo(userId);
+        example.setOrderByClause("gmt_create desc");
         List<Notification> notifications = notificationMapper.selectByExampleWithRowbounds(example, new RowBounds(offset, size));
+        List<NotificationDTO> notificationDTOS = new ArrayList<>();
         if(notifications.size()==0){
+            paginationDTO.setData(notificationDTOS);
             return paginationDTO;
         }
-        List<NotificationDTO> notificationDTOS = new ArrayList<>();
         for (Notification notification : notifications) {
             NotificationDTO notificationDTO = new NotificationDTO();
             BeanUtils.copyProperties(notification,notificationDTO);
             notificationDTO.setTypeName(NotificationTypeEnum.nameOfType(notification.getType()));
             notificationDTOS.add(notificationDTO);
         }
+
         paginationDTO.setData(notificationDTOS);
         return paginationDTO;
      }

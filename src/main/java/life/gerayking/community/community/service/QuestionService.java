@@ -2,14 +2,15 @@ package life.gerayking.community.community.service;
 
 import life.gerayking.community.community.dto.PaginationDTO;
 import life.gerayking.community.community.dto.QuestionDTO;
+import life.gerayking.community.community.dto.QuestionQueryDTO;
 import life.gerayking.community.community.mapper.QuestionExtMapper;
 import life.gerayking.community.community.mapper.QuestionMapper;
 import life.gerayking.community.community.mapper.UserMapper;
 import life.gerayking.community.community.model.Question;
 import life.gerayking.community.community.model.QuestionExample;
 import life.gerayking.community.community.model.User;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.session.RowBounds;
-import org.h2.util.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,15 +27,23 @@ public class QuestionService {
     private QuestionMapper questionMapper;
     @Autowired
     private QuestionExtMapper questionExtMapper;
-    public PaginationDTO list(Integer page, Integer size) {
-
-        Integer totalCount = (int)questionMapper.countByExample(new QuestionExample());
+    public PaginationDTO list(String search,Integer page, Integer size) {
+        if(StringUtils.isNotBlank(search)){
+            search = search.replace(',','|');
+        }
+        QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
+        questionQueryDTO.setSearch(search);
+        Integer totalCount = (int)questionExtMapper.countBySearch(questionQueryDTO);
         Integer totalPage=totalCount%size==0?totalCount/size:totalCount/size+1;
         page=Math.min(page,totalPage);
         page=Math.max(page,1);
         Integer offset = size * (page-1);
         PaginationDTO paginationDTO = new PaginationDTO();
-        List<Question> questions = questionMapper.selectByExampleWithBLOBsWithRowbounds(new QuestionExample(), new RowBounds(offset, size));
+        QuestionExample example = new QuestionExample();
+        example.setOrderByClause("gmt_create desc");
+        questionQueryDTO.setPage(offset);
+        questionQueryDTO.setSize(size);
+        List<Question> questions = questionExtMapper.selectBySearch(questionQueryDTO);
         List<QuestionDTO> questionDTOList = new ArrayList<>();
         for(Question question:questions)
         {
@@ -44,7 +53,6 @@ public class QuestionService {
             questionDTO.setUser(user);
             questionDTOList.add(questionDTO);
         }
-        Collections.reverse(questionDTOList);
         paginationDTO.setData(questionDTOList);
         paginationDTO.setPagination(totalCount,page,size);
         return paginationDTO;
@@ -120,7 +128,7 @@ public class QuestionService {
     }
 
     public List<QuestionDTO> selectRelated(QuestionDTO queryDTO) {
-        if(StringUtils.isNullOrEmpty(queryDTO.getTag().trim())){
+        if(StringUtils.isNotBlank(queryDTO.getTag())){
             return new ArrayList<>();
         }
         //String[] tags = StringUtils.arraySplit(queryDTO.getTag(), ',', true);

@@ -41,25 +41,25 @@
         <nav aria-label="Page navigation">
             <ul class="pagination">
                 <li th:if="${paginations.showFirstPage}">
-                    <a th:href="@{/(page=${1})}" aria-label="Previous">
+                    <a th:href="@{/(page=${1}),search=${search}}" aria-label="Previous">
                         <span aria-hidden="true">&lt;&lt;</span>
                     </a>
                 </li>
                 <li th:if="${paginations.showPrevious}">
-                    <a th:href="@{/(page=${paginations.page-1})}" aria-label="Previous">
+                    <a th:href="@{/(page=${paginations.page-1},search=${search})}" aria-label="Previous">
                         <span aria-hidden="true">&lt;</span>
                     </a>
                 </li>
                 <li th:each="page:${paginations.pages}" th:class="${paginations.page==page}?'active':''" >
-                            <a th:href="@{/(page = ${page})}" th:text="${page}"></a>
+                            <a th:href="@{/(page = ${page},search=${search})}" th:text="${page}"></a>
                 </li>
                 <li th:if="${paginations.showNext}">
-                    <a th:href="@{/(page=${paginations.page+1})}" aria-label="Next">
+                    <a th:href="@{/(page=${paginations.page+1},search=${search})}" aria-label="Next">
                         <span aria-hidden="true">&gt;</span>
                     </a>
                 </li>
                 <li th:if="${paginations.showEndPage}">
-                    <a th:href="@{/(page=${paginations.getEndPage()})}" aria-label="Next">
+                    <a th:href="@{/(page=${paginations.totalPage},search=${search})}" aria-label="Next">
                         <span aria-hidden="true">&gt;&gt;</span>
                     </a>
                 </li>
@@ -71,5 +71,6 @@
         <h3>热门话题</h3>
     </div>
 </div>
+<div th:insert="footer::foot"></div>
 </body>
 </html>

@@ -1,0 +1,6 @@
+2020-03-02 17:10:42.937  INFO 8060 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/p_user?serverTimezone=GMT'
+2020-03-02 17:10:43.517  INFO 8060 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-02 17:10:43.590  INFO 8060 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-02 17:10:43.774  INFO 8060 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-02 17:10:44.499  INFO 8060 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (https) with context path ''
+2020-03-02 17:10:44.502  INFO 8060 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 4.182 seconds (JVM running for 5.459)

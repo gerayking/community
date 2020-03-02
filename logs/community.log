@@ -1,0 +1,21 @@
+2020-03-02 17:13:22.837  INFO 3164 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-5Q77JR4 with PID 3164 (F:\BLOGsign\community\target\classes started by 91917 in F:\BLOGsign\community)
+2020-03-02 17:13:22.840  INFO 3164 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2020-03-02 17:13:22.894  INFO 3164 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-02 17:13:22.895  INFO 3164 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-02 17:13:24.220  INFO 3164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (https)
+2020-03-02 17:13:24.234  INFO 3164 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-02 17:13:24.235  INFO 3164 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-03-02 17:13:24.239  INFO 3164 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-03-02 17:13:24.240  INFO 3164 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-02 17:13:24.241  INFO 3164 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-02 17:13:24.245  INFO 3164 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-03-02 17:13:24.345  INFO 3164 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-02 17:13:24.345  INFO 3164 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1450 ms
+2020-03-02 17:13:24.409  INFO 3164 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-02 17:13:25.084  INFO 3164 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-02 17:13:25.089  INFO 3164 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/p_user?serverTimezone=GMT'
+2020-03-02 17:13:25.700  INFO 3164 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-02 17:13:25.775  INFO 3164 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-02 17:13:25.963  INFO 3164 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-02 17:13:26.733  INFO 3164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (https) with context path ''
+2020-03-02 17:13:26.735  INFO 3164 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 4.31 seconds (JVM running for 5.533)

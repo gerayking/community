@@ -97,6 +97,9 @@ public class CommentService {
     // 评论，评论的对象的人的ID，发出评论人的名字，被评论的内容，评论的类型
     private void createNotify(Comment comment, Long reciver, String notifierName, String outerTitle, NotificationTypeEnum notificationType) {
         Notification notification = new Notification();
+        if(reciver == comment.getCommentator()){
+            return ;
+        }
 //        OuterId需要判断是一级评论还是二级评论，需要获取该问题的编号
         if(comment.getType() == CommentTypeEnum.QUESTION.getType()){
             notification.setOuterId(comment.getParentId());

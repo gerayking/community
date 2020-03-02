@@ -5,6 +5,7 @@ import life.gerayking.community.community.dto.GithubUser;
 import life.gerayking.community.community.mapper.UserMapper;
 import life.gerayking.community.community.model.User;
 import life.gerayking.community.community.provider.GithubProvider;
+import life.gerayking.community.community.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -19,6 +20,8 @@ import java.util.UUID;
 public class AuthorizeController {
     @Autowired
     private GithubProvider githubProvider;
+    @Autowired
+    UserService userService;
     @Autowired
     private UserMapper userMapper;
     @Value("${github.client_id}")
@@ -49,8 +52,8 @@ public class AuthorizeController {
             user.setAccountId(String.valueOf(githubUser.getId()));
             user.setGmtCreate(System.currentTimeMillis());
             user.setGmtModified(user.getGmtCreate());
-            user.setAvatarUrl(githubUser.getAvatar_url());
-            userMapper.insert(user);
+            user.setAvatarUrl(githubUser.getAvatarUrl());
+            userService.createOrUpdate(user);
             response.addCookie(new Cookie("token",token));
             request.getSession().setAttribute("user", githubUser);
             return "redirect:/";
