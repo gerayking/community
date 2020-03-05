@@ -1,21 +1,270 @@
-2020-03-02 17:13:22.837  INFO 3164 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-5Q77JR4 with PID 3164 (F:\BLOGsign\community\target\classes started by 91917 in F:\BLOGsign\community)
-2020-03-02 17:13:22.840  INFO 3164 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
-2020-03-02 17:13:22.894  INFO 3164 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-03-02 17:13:22.895  INFO 3164 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-03-02 17:13:24.220  INFO 3164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (https)
-2020-03-02 17:13:24.234  INFO 3164 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-03-02 17:13:24.235  INFO 3164 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2020-03-02 17:13:24.239  INFO 3164 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
-2020-03-02 17:13:24.240  INFO 3164 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
-2020-03-02 17:13:24.241  INFO 3164 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
-2020-03-02 17:13:24.245  INFO 3164 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
-2020-03-02 17:13:24.345  INFO 3164 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-03-02 17:13:24.345  INFO 3164 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1450 ms
-2020-03-02 17:13:24.409  INFO 3164 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-03-02 17:13:25.084  INFO 3164 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-03-02 17:13:25.089  INFO 3164 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/p_user?serverTimezone=GMT'
-2020-03-02 17:13:25.700  INFO 3164 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-03-02 17:13:25.775  INFO 3164 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-03-02 17:13:25.963  INFO 3164 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-03-02 17:13:26.733  INFO 3164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (https) with context path ''
-2020-03-02 17:13:26.735  INFO 3164 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 4.31 seconds (JVM running for 5.533)
+2020-03-05 18:07:57.272  INFO 6888 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-5Q77JR4 with PID 6888 (F:\BLOGsign\community\target\classes started by 91917 in F:\BLOGsign\community)
+2020-03-05 18:07:57.283  INFO 6888 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2020-03-05 18:07:57.561  INFO 6888 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-05 18:07:57.561  INFO 6888 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-05 18:08:01.490  INFO 6888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (https)
+2020-03-05 18:08:01.505  INFO 6888 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 18:08:01.506  INFO 6888 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-03-05 18:08:01.511  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-03-05 18:08:01.511  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-05 18:08:01.511  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-05 18:08:01.518  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-03-05 18:08:01.765  INFO 6888 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 18:08:01.766  INFO 6888 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4204 ms
+2020-03-05 18:08:01.864  INFO 6888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-05 18:08:04.917  INFO 6888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-05 18:08:04.922  INFO 6888 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/p_user?serverTimezone=GMT'
+2020-03-05 18:08:06.322  INFO 6888 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 18:08:06.413  INFO 6888 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 18:08:08.507  INFO 6888 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 18:08:09.502  INFO 6888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (https) with context path ''
+2020-03-05 18:08:09.508  INFO 6888 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 13.396 seconds (JVM running for 17.477)
+2020-03-05 18:08:18.296  INFO 6888 --- [https-openssl-nio-8887-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-05 18:08:18.297  INFO 6888 --- [https-openssl-nio-8887-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-05 18:08:18.302  INFO 6888 --- [https-openssl-nio-8887-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-03-05 18:08:18.423 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.Q.countBySearch                : ==>  Preparing: select count(*) from QUESTION 
+2020-03-05 18:08:18.476 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.Q.countBySearch                : ==> Parameters: 
+2020-03-05 18:08:20.458 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.Q.countBySearch                : <==      Total: 1
+2020-03-05 18:08:20.463 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.Q.selectBySearch               : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-05 18:08:20.464 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.Q.selectBySearch               : ==> Parameters: 0(Integer), 5(Integer)
+2020-03-05 18:08:20.533 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.Q.selectBySearch               : <==      Total: 5
+2020-03-05 18:08:20.534 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:08:20.534 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:08:20.632 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:08:20.636 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:08:20.636 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:08:20.637 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:08:20.638 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:08:20.638 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:08:20.640 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:08:20.640 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:08:20.640 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:08:20.642 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:08:20.643 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:08:20.644 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:08:20.645 DEBUG 6888 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:08:21.134 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.Q.countBySearch                : ==>  Preparing: select count(*) from QUESTION 
+2020-03-05 18:08:21.135 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.Q.countBySearch                : ==> Parameters: 
+2020-03-05 18:08:21.136 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.Q.countBySearch                : <==      Total: 1
+2020-03-05 18:08:21.137 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.Q.selectBySearch               : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-05 18:08:21.138 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.Q.selectBySearch               : ==> Parameters: 0(Integer), 5(Integer)
+2020-03-05 18:08:21.141 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.Q.selectBySearch               : <==      Total: 5
+2020-03-05 18:08:21.142 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:08:21.143 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:08:21.144 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:08:21.145 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:08:21.145 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:08:21.147 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:08:21.148 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:08:21.148 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:08:21.150 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:08:21.151 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:08:21.152 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:08:21.155 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:08:21.156 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:08:21.156 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:08:21.158 DEBUG 6888 --- [https-openssl-nio-8887-exec-8] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:14:21.429  INFO 6888 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-05 18:14:21.430  INFO 6888 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-03-05 18:14:21.793  INFO 6888 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-03-05 18:14:22.252  INFO 6888 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-5Q77JR4 with PID 6888 (F:\BLOGsign\community\target\classes started by 91917 in F:\BLOGsign\community)
+2020-03-05 18:14:22.252  INFO 6888 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2020-03-05 18:14:22.430  WARN 6888 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2020-03-05 18:14:22.438  INFO 6888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (https)
+2020-03-05 18:14:22.439  INFO 6888 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 18:14:22.439  INFO 6888 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-03-05 18:14:22.439  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-03-05 18:14:22.439  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-05 18:14:22.439  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-05 18:14:22.440  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-03-05 18:14:22.482  INFO 6888 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 18:14:22.483  INFO 6888 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 229 ms
+2020-03-05 18:14:22.496  INFO 6888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-03-05 18:14:22.558  INFO 6888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-03-05 18:14:22.558  INFO 6888 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/p_user?serverTimezone=GMT'
+2020-03-05 18:14:22.773  INFO 6888 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 18:14:22.792  INFO 6888 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 18:14:22.927  INFO 6888 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 18:14:23.201  INFO 6888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (https) with context path ''
+2020-03-05 18:14:23.202  INFO 6888 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 0.967 seconds (JVM running for 391.17)
+2020-03-05 18:14:23.203  INFO 6888 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-05 18:14:57.082  INFO 6888 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-05 18:14:57.083  INFO 6888 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2020-03-05 18:14:57.091  INFO 6888 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2020-03-05 18:14:57.501  INFO 6888 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-5Q77JR4 with PID 6888 (F:\BLOGsign\community\target\classes started by 91917 in F:\BLOGsign\community)
+2020-03-05 18:14:57.502  INFO 6888 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2020-03-05 18:14:57.665  WARN 6888 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2020-03-05 18:14:57.674  INFO 6888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (https)
+2020-03-05 18:14:57.675  INFO 6888 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 18:14:57.676  INFO 6888 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-03-05 18:14:57.676  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-03-05 18:14:57.677  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-05 18:14:57.677  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-05 18:14:57.677  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-03-05 18:14:57.718  INFO 6888 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 18:14:57.719  INFO 6888 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 215 ms
+2020-03-05 18:14:57.728  INFO 6888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2020-03-05 18:14:57.775  INFO 6888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2020-03-05 18:14:57.775  INFO 6888 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/p_user?serverTimezone=GMT'
+2020-03-05 18:14:57.903  INFO 6888 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 18:14:57.915  INFO 6888 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 18:14:58.026  INFO 6888 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 18:14:58.281  INFO 6888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (https) with context path ''
+2020-03-05 18:14:58.281  INFO 6888 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 0.796 seconds (JVM running for 426.25)
+2020-03-05 18:14:58.283  INFO 6888 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-05 18:15:56.227  INFO 6888 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-05 18:15:56.227  INFO 6888 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2020-03-05 18:15:56.235  INFO 6888 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2020-03-05 18:15:56.555  INFO 6888 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-5Q77JR4 with PID 6888 (F:\BLOGsign\community\target\classes started by 91917 in F:\BLOGsign\community)
+2020-03-05 18:15:56.556  INFO 6888 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2020-03-05 18:15:56.730  WARN 6888 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2020-03-05 18:15:56.740  INFO 6888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (https)
+2020-03-05 18:15:56.741  INFO 6888 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 18:15:56.741  INFO 6888 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-03-05 18:15:56.741  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-03-05 18:15:56.741  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-05 18:15:56.741  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-05 18:15:56.741  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-03-05 18:15:56.755  INFO 6888 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 18:15:56.756  INFO 6888 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 198 ms
+2020-03-05 18:15:56.766  INFO 6888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2020-03-05 18:15:56.822  INFO 6888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2020-03-05 18:15:56.823  INFO 6888 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/p_user?serverTimezone=GMT'
+2020-03-05 18:15:56.928  INFO 6888 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 18:15:56.937  INFO 6888 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 18:15:57.014  INFO 6888 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 18:15:57.205  INFO 6888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (https) with context path ''
+2020-03-05 18:15:57.205  INFO 6888 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 0.672 seconds (JVM running for 485.174)
+2020-03-05 18:15:57.206  INFO 6888 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-05 18:19:32.981  INFO 6888 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-05 18:19:32.982  INFO 6888 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2020-03-05 18:19:32.990  INFO 6888 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2020-03-05 18:19:33.316  INFO 6888 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-5Q77JR4 with PID 6888 (F:\BLOGsign\community\target\classes started by 91917 in F:\BLOGsign\community)
+2020-03-05 18:19:33.317  INFO 6888 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2020-03-05 18:19:33.460  WARN 6888 --- [restartedMain] org.apache.tomcat.util.modeler.Registry  : The MBean registry cannot be disabled because it has already been initialised
+2020-03-05 18:19:33.469  INFO 6888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (https)
+2020-03-05 18:19:33.469  INFO 6888 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 18:19:33.469  INFO 6888 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-03-05 18:19:33.470  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-03-05 18:19:33.470  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-05 18:19:33.470  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-05 18:19:33.470  INFO 6888 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-03-05 18:19:33.508  INFO 6888 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 18:19:33.508  INFO 6888 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 190 ms
+2020-03-05 18:19:33.515  INFO 6888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2020-03-05 18:19:33.682  INFO 6888 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2020-03-05 18:19:33.683  INFO 6888 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/p_user?serverTimezone=GMT'
+2020-03-05 18:19:33.867  INFO 6888 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 18:19:33.891  INFO 6888 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 18:19:34.009  INFO 6888 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 18:19:34.193  INFO 6888 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (https) with context path ''
+2020-03-05 18:19:34.193  INFO 6888 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 0.894 seconds (JVM running for 702.162)
+2020-03-05 18:19:34.194  INFO 6888 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-03-05 18:23:49.567  INFO 5872 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-5Q77JR4 with PID 5872 (F:\BLOGsign\community\target\classes started by 91917 in F:\BLOGsign\community)
+2020-03-05 18:23:49.578  INFO 5872 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2020-03-05 18:23:49.662  INFO 5872 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-05 18:23:49.662  INFO 5872 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-05 18:23:51.324  INFO 5872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (https)
+2020-03-05 18:23:51.349  INFO 5872 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-05 18:23:51.349  INFO 5872 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-03-05 18:23:51.354  INFO 5872 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-03-05 18:23:51.354  INFO 5872 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-03-05 18:23:51.354  INFO 5872 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-03-05 18:23:51.360  INFO 5872 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-03-05 18:23:51.444  INFO 5872 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-05 18:23:51.444  INFO 5872 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1782 ms
+2020-03-05 18:23:51.501  INFO 5872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-03-05 18:23:52.309  INFO 5872 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-03-05 18:23:52.312  INFO 5872 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/p_user?serverTimezone=GMT'
+2020-03-05 18:23:52.863  INFO 5872 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-05 18:23:52.904  INFO 5872 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-05 18:23:53.039  INFO 5872 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-05 18:23:53.644  INFO 5872 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (https) with context path ''
+2020-03-05 18:23:53.646  INFO 5872 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 4.705 seconds (JVM running for 6.561)
+2020-03-05 18:24:11.750  INFO 5872 --- [https-openssl-nio-8887-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-05 18:24:11.751  INFO 5872 --- [https-openssl-nio-8887-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-05 18:24:11.762  INFO 5872 --- [https-openssl-nio-8887-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-03-05 18:24:11.845 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.Q.countBySearch                : ==>  Preparing: select count(*) from QUESTION 
+2020-03-05 18:24:11.877 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.Q.countBySearch                : ==> Parameters: 
+2020-03-05 18:24:11.993 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.Q.countBySearch                : <==      Total: 1
+2020-03-05 18:24:11.996 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.Q.selectBySearch               : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-05 18:24:11.996 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.Q.selectBySearch               : ==> Parameters: 0(Integer), 5(Integer)
+2020-03-05 18:24:12.032 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.Q.selectBySearch               : <==      Total: 5
+2020-03-05 18:24:12.033 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:24:12.033 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:24:12.066 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:24:12.072 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:24:12.072 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:24:12.073 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:24:12.074 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:24:12.074 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:24:12.075 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:24:12.075 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:24:12.075 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:24:12.076 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:24:12.077 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:24:12.077 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:24:12.078 DEBUG 5872 --- [https-openssl-nio-8887-exec-6] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:24:55.140 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.Q.countBySearch                : ==>  Preparing: select count(*) from QUESTION 
+2020-03-05 18:24:55.141 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.Q.countBySearch                : ==> Parameters: 
+2020-03-05 18:24:55.924 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.Q.countBySearch                : <==      Total: 1
+2020-03-05 18:24:55.924 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.Q.selectBySearch               : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-05 18:24:55.925 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.Q.selectBySearch               : ==> Parameters: 0(Integer), 5(Integer)
+2020-03-05 18:24:55.928 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.Q.selectBySearch               : <==      Total: 5
+2020-03-05 18:24:55.928 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:24:55.929 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:24:55.930 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:24:55.930 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:24:55.931 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:24:55.932 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:24:55.932 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:24:55.932 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:24:55.933 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:24:55.934 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:24:55.934 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:24:55.935 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:24:55.935 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:24:55.935 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:24:55.936 DEBUG 5872 --- [https-openssl-nio-8887-exec-3] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:25:37.982 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.Q.countBySearch                : ==>  Preparing: select count(*) from QUESTION 
+2020-03-05 18:25:37.983 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.Q.countBySearch                : ==> Parameters: 
+2020-03-05 18:25:37.986 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.Q.countBySearch                : <==      Total: 1
+2020-03-05 18:25:37.988 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.Q.selectBySearch               : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-05 18:25:37.989 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.Q.selectBySearch               : ==> Parameters: 0(Integer), 5(Integer)
+2020-03-05 18:25:37.992 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.Q.selectBySearch               : <==      Total: 5
+2020-03-05 18:25:37.993 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:25:37.994 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:25:37.996 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:25:37.998 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:25:37.998 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:25:37.999 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:25:38.000 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:25:38.000 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:25:38.001 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:25:38.002 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:25:38.002 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:25:38.003 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:25:38.004 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:25:38.004 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:25:38.005 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:26:07.809 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.Q.countBySearch                : ==>  Preparing: select count(*) from QUESTION 
+2020-03-05 18:26:07.809 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.Q.countBySearch                : ==> Parameters: 
+2020-03-05 18:26:07.811 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.Q.countBySearch                : <==      Total: 1
+2020-03-05 18:26:07.811 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.Q.selectBySearch               : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2020-03-05 18:26:07.812 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.Q.selectBySearch               : ==> Parameters: 0(Integer), 5(Integer)
+2020-03-05 18:26:07.823 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.Q.selectBySearch               : <==      Total: 5
+2020-03-05 18:26:07.823 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:26:07.824 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:26:07.826 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:26:07.828 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:26:07.829 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:26:07.830 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:26:07.831 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:26:07.831 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:26:07.832 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:26:07.833 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:26:07.833 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:26:07.834 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
+2020-03-05 18:26:07.834 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select ID, name, account_id, token, gmt_create, gmt_modified, bio, avatar_url from user where ID = ? 
+2020-03-05 18:26:07.834 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 1(Long)
+2020-03-05 18:26:07.835 DEBUG 5872 --- [https-openssl-nio-8887-exec-1] l.g.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1

@@ -6,6 +6,7 @@ import life.gerayking.community.community.mapper.UserMapper;
 import life.gerayking.community.community.model.User;
 import life.gerayking.community.community.provider.GithubProvider;
 import life.gerayking.community.community.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 @Controller
+@Slf4j
 public class AuthorizeController {
     @Autowired
     private GithubProvider githubProvider;
@@ -42,6 +44,7 @@ public class AuthorizeController {
         accesstokenDTO.setRedirect_uri(redirectUri);
         accesstokenDTO.setState(state);
         String accessToken = githubProvider.getAccessToken(accesstokenDTO);
+        System.out.println(accessToken);
         GithubUser githubUser = githubProvider.getUser(accessToken);
         if(githubUser !=null)
         {
@@ -60,6 +63,7 @@ public class AuthorizeController {
             // 登录成功，写cookie与session
         }
         else {
+            log.error("callback get gihub error {}",githubUser);
             //登录失败，重新登录
             return "redirect:/";
         }

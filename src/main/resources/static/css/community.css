@@ -113,8 +113,12 @@ body{
     background-color: #38bf33;
 }
 .foot{
-    position: fixed;
-    bottom: 0px;
     padding: 15px 35%;
     color: #666;
+}
+.question-thu:hover{
+    background: #cccccc;
+}
+.index-production{
+    margin: 20px;
 }
