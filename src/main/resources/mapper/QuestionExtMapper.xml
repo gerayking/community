@@ -81,5 +81,7 @@
     </if>
     limit #{page},#{size}
   </select>
-
+  <select id="selectByHot" resultMap="BaseResultMap">
+    select * from question order by comment_count desc limit 5
+  </select>
 </mapper>

@@ -13,6 +13,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -128,16 +129,13 @@ public class QuestionService {
     }
 
     public List<QuestionDTO> selectRelated(QuestionDTO queryDTO) {
-        if(StringUtils.isNotBlank(queryDTO.getTag())){
+        if(StringUtils.isBlank(queryDTO.getTag())){
             return new ArrayList<>();
         }
-        //String[] tags = StringUtils.arraySplit(queryDTO.getTag(), ',', true);
-        //Arrays.stream(tags).collect(Collectors.joining("|"));
         String regexpTag = queryDTO.getTag().replace(',','|');
         Question question = new Question();
         question.setId(queryDTO.getId());
         question.setTag(regexpTag);
-
         List<Question> questions = questionExtMapper.selectRelated(question);
         List<QuestionDTO> questionDTOs = questions.stream().map(q -> {
             QuestionDTO questionDTO = new QuestionDTO();
@@ -145,5 +143,15 @@ public class QuestionService {
             return questionDTO;
         }).collect(Collectors.toList());
         return questionDTOs;
+    }
+
+    public List<QuestionDTO> getHotList() {
+        List<Question> questions = questionExtMapper.selectByHot();
+        List<QuestionDTO>questionDTOS = questions.stream().map(q->{
+            QuestionDTO questionDTO = new QuestionDTO();
+            BeanUtils.copyProperties(q,questionDTO);
+            return questionDTO;
+        }).collect(Collectors.toList());
+        return questionDTOS;
     }
 }

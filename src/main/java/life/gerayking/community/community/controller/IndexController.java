@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /*
 Creat by coderinker on 2019/12/2
@@ -30,13 +31,15 @@ public class IndexController {
     public String index(HttpServletRequest request,
                         Model model,
                         @RequestParam(name ="page",defaultValue = "1")Integer page,
-                        @RequestParam(name ="size",defaultValue = "5")Integer size,
+                        @RequestParam(name ="size",defaultValue = "8")Integer size,
                         @RequestParam(name ="search",required = false )String search){
         PaginationDTO<QuestionDTO> paginationDTO = questionService.list(search,page,size);
+        List<QuestionDTO> hotQuestionDTOList = questionService.getHotList();
         QuoteDTO quoteDTO = quoteService.get();
         model.addAttribute("paginations",paginationDTO);
         model.addAttribute("search",search);
         model.addAttribute("quote",quoteDTO);
+        model.addAttribute("hotQuestions",hotQuestionDTOList);
         return "index";
     }
 }
