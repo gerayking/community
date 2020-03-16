@@ -88,20 +88,22 @@ public class AuthorizeController {
         accesstokenDTO.setRedirect_uri(qqRedirectUrl);
         accesstokenDTO.setState(state);
         String accessToken = qqProvider.getAccessToken(accesstokenDTO);
+        System.out.println(accessToken);
         String openId = qqProvider.getOpenId(accessToken);
         qqUserDTO qqUserDTO = qqProvider.getUser(openId,accesstokenDTO.getClient_id(),accessToken);
+        System.out.println(qqUserDTO.toString());
         if(qqUserDTO !=null)
         {
             User user = new User();
             String token = UUID.randomUUID().toString();
-            user.setToken(accessToken);
+            user.setToken(token);
             user.setName(qqUserDTO.getNickname());
             user.setAccountId(openId);
             user.setGmtCreate(System.currentTimeMillis());
             user.setGmtModified(user.getGmtCreate());
             user.setAvatarUrl(qqUserDTO.getFigureurl());
             userService.createOrUpdate(user);
-            response.addCookie(new Cookie("token",accessToken));
+            response.addCookie(new Cookie("token",token));
             request.getSession().setAttribute("user", user);
             return "redirect:/";
             // 登录成功，写cookie与session

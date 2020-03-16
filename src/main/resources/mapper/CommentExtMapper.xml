@@ -18,7 +18,7 @@
     <result column="comment_count" jdbcType="INTEGER" property="commentCount" />
   </resultMap>
   <update id="incCommentCount" parameterType="life.gerayking.community.community.model.Comment">
-    update COMMENT
+    update comment
     set comment_count = comment_count+#{commentCount,jdbcType=INTEGER}
     where id = #{id}
   </update>
