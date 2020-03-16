@@ -1,5 +1,7 @@
 package life.gerayking.community.community.controller;
 
+import life.gerayking.community.community.dto.qqUserDTO;
+import life.gerayking.community.community.provider.qqProvider;
 import life.gerayking.community.community.dto.AccesstokenDTO;
 import life.gerayking.community.community.dto.GithubUser;
 import life.gerayking.community.community.mapper.UserMapper;
@@ -31,7 +33,13 @@ public class AuthorizeController {
     @Value("${github.client_secret}")
     private  String clientSecret;
     @Value("${github.redirect_uri}")
-    private  String redirectUri;
+    private  String redirectUrl;
+    @Value("${qq.client_id}")
+    private String qqClientId;
+    @Value("${qq.client_secret}")
+    private String qqClientSecret;
+    @Value("${qq.redirct_url}")
+    private String qqRedirectUrl;
     @GetMapping("/callback")
     public String callback(@RequestParam(name="code") String code,
                            @RequestParam(name="state") String state,
@@ -41,7 +49,7 @@ public class AuthorizeController {
         accesstokenDTO.setCode(code);
         accesstokenDTO.setClient_id(clientId);
         accesstokenDTO.setClient_secret(clientSecret);
-        accesstokenDTO.setRedirect_uri(redirectUri);
+        accesstokenDTO.setRedirect_uri(redirectUrl);
         accesstokenDTO.setState(state);
         String accessToken = githubProvider.getAccessToken(accesstokenDTO);
         System.out.println(accessToken);
@@ -67,6 +75,39 @@ public class AuthorizeController {
             //登录失败，重新登录
             return "redirect:/";
         }
+    }
+    @GetMapping("/qqcallback")
+    public String qqcallback(@RequestParam(name="code") String code,
+                             @RequestParam(name="state") String state,
+                             HttpServletRequest request,
+                             HttpServletResponse response){
+        AccesstokenDTO accesstokenDTO = new AccesstokenDTO();
+        accesstokenDTO.setCode(code);
+        accesstokenDTO.setClient_id(qqClientId);
+        accesstokenDTO.setClient_secret(qqClientSecret);
+        accesstokenDTO.setRedirect_uri(qqRedirectUrl);
+        accesstokenDTO.setState(state);
+        String accessToken = qqProvider.getAccessToken(accesstokenDTO);
+        String openId = qqProvider.getOpenId(accessToken);
+        qqUserDTO qqUserDTO = qqProvider.getUser(openId,accesstokenDTO.getClient_id(),accessToken);
+        if(qqUserDTO !=null)
+        {
+            User user = new User();
+            String token = UUID.randomUUID().toString();
+            user.setToken(accessToken);
+            user.setName(qqUserDTO.getNickname());
+            user.setAccountId(openId);
+            user.setGmtCreate(System.currentTimeMillis());
+            user.setGmtModified(user.getGmtCreate());
+            user.setAvatarUrl(qqUserDTO.getFigureurl());
+            userService.createOrUpdate(user);
+            response.addCookie(new Cookie("token",accessToken));
+            request.getSession().setAttribute("user", user);
+            return "redirect:/";
+            // 登录成功，写cookie与session
+        }
+        return "redirect:/";
+
     }
     @GetMapping("/logout")
     public String logout(HttpServletRequest request,

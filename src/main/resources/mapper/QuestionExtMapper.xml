@@ -34,7 +34,7 @@
 
   <select id="countBySearch" parameterType="life.gerayking.community.community.dto.QuestionQueryDTO"
           resultType="java.lang.Integer">
-    select count(*) from QUESTION
+    select count(*) from question
     <where>
       <if test="search != null and search != ''">
         and title regexp #{search}
@@ -52,7 +52,7 @@
   </select>
   <select id="selectBySearch" parameterType="life.gerayking.community.community.dto.QuestionQueryDTO"
           resultMap="BaseResultMap">
-    select * from QUESTION
+    select * from question
     <where>
       <if test="search != null and search != ''">
         and title regexp #{search}

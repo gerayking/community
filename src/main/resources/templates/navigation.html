@@ -50,7 +50,7 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a onclick="login()">QQ用户登录(尚未开放)</a></li>
+                            <li><a th:href="@{https://graph.qq.com/oauth2.0/authorize(response_type='code',client_id=101854073,redirect_uri='http://www.gerayking.cn/qqcallback',state='1',scope='get_user_info,get_info')}" onclick="login()">QQ用户登录</a></li>
                             <li><a th:href="@{https://github.com/login/oauth/authorize(client_id='7da624c9627d05f07e5b',redirect_uri=${#httpServletRequest.getServletContext().getAttribute('redirectUri')},scope='user',state=1)}">github用户登录</a></li>
                         </ul>
                     </li>
